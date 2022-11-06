@@ -1,4 +1,7 @@
 export class Vehicle {
+  name(name: any) {
+    throw new Error('Method not implemented.');
+  }
   id: string;
   marca: string;
   linea: string;

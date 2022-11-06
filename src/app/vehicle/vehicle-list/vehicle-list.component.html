@@ -1,10 +1,12 @@
-<h1>TuSegundazo.com</h1>
-<img src="/assets/image 1.png"  class="img-fluid" alt="Responsive image"/>
+<img src="/assets/TuSegundazo.com.png"  class="img-fluid" alt="Responsive image"/>
+<br/>
+<img src="/assets/Line14.png"  class="img-fluid" alt="Responsive image"/>
+<img src="/assets/image.png"  class="img-fluid" alt="Responsive image"/>
 
 <div class="“container-fluid”">
   <div class="“row”">
-    <table class="table" >
-      <thead class="table-dark" >
+    <table class="table"  aria-describedby="mydesc" style="width:792px">
+      <thead class="table-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Marca</th>
@@ -23,5 +25,13 @@
         </tr>
       </tbody>
     </table>
+    <div *ngFor="let total of totals; index as i">
+      Total {{total.marca}} : {{total.total}}
+    </div>
+    <div class="row">
+      <div class="col-4 text-center">
+        Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo
+      </div>
+  </div>
   </div>
 </div>
