@@ -1,0 +1,27 @@
+<h1>TuSegundazo.com</h1>
+<img src="/assets/image 1.png"  class="img-fluid" alt="Responsive image"/>
+
+<div class="“container-fluid”">
+  <div class="“row”">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>
+          <th scope="col">L&iacute;nea</th>
+          <th scope="col">Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicles; index as i">
+          <td>
+            {{ vehicle.id }}
+          </td>
+          <td>{{ vehicle.marca }}</td>
+          <td>{{ vehicle.linea }}</td>
+          <td>{{ vehicle.modelo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
