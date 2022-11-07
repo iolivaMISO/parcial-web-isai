@@ -48,8 +48,8 @@ describe('Service: Vehicle', () => {
   it('should ...', inject([VehicleService], (service: VehicleService) => {
     expect(service).toBeTruthy();
   }));
-  it('should have 3 + header table in td elements', () => {
-    let tableRows = fixture.nativeElement.querySelectorAll('tr');
-    expect(tableRows.length).toBe(4);
+  it('Revisión de generación de tablas', () => {
+    let tablasRow = fixture.nativeElement.querySelectorAll('tr');
+    expect(tablasRow.length).toBe(4);
   });
 });
