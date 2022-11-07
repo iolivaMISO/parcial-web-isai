@@ -2,7 +2,7 @@ export class Vehicle {
   name(name: any) {
     throw new Error('Method not implemented.');
   }
-  id: string;
+  id: number;
   marca: string;
   linea: string;
   referencia: string;
@@ -10,16 +10,25 @@ export class Vehicle {
   kilometraje: number;
   color: string;
   imagen: string;
-  constructor(
-    id: string,
-    marca: string,
-    linea: string,
-    referencia: string,
-    modelo: string,
-    kilometraje: number,
-    color: string,
-    imagen: string
-  ) {
+  constructor({
+    id,
+    marca,
+    linea,
+    referencia,
+    modelo,
+    kilometraje,
+    color,
+    imagen,
+  }: {
+    id: number;
+    marca: string;
+    linea: string;
+    referencia: string;
+    modelo: string;
+    kilometraje: number;
+    color: string;
+    imagen: string;
+  }) {
     this.id = id;
     this.marca = marca;
     this.linea = linea;

@@ -1,16 +1,22 @@
-/* tslint:disable:no-unused-variable */
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { TestBed, async, inject } from '@angular/core/testing';
-import { VehicleService } from './vehicle.service';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+import { Vehicle } from './vehicle';
 
-describe('Service: Vehicle', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [VehicleService]
-    });
-  });
 
-  it('should ...', inject([VehicleService], (service: VehicleService) => {
-    expect(service).toBeTruthy();
-  }));
-});
+@Injectable({
+  providedIn: 'root'
+})
+export class BookService {
+
+  private apiUrl: string = environment.baseUrl;
+
+  constructor(private http: HttpClient) { }
+
+  getAllVehicles(): Observable<Vehicle[]> {
+    return this.http.get<Vehicle[]>(this.apiUrl);
+  }
+
+}
